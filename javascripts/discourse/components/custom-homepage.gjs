@@ -17,6 +17,13 @@ export default class CustomHomepage extends Component {
     this.hiddenSubmit.inputValue = event.target.value;
   }
 
+  @action
+  handleKeyDown(event) {
+    if (event.key === "Enter") {
+      this.hiddenSubmit.submitToBot();
+    }
+  }
+
   <template>
     {{bodyClass "custom-homepage"}}
     <div class="custom-homepage__content-wrapper">
@@ -25,10 +32,11 @@ export default class CustomHomepage extends Component {
       <div class="custom-homepage__input-wrapper">
         <Input
           {{didInsert this.hiddenSubmit.focusInput}}
-          id="custom-homepage-input"
-          @type="text"
-          placeholder={{i18n (themePrefix "input_placeholder")}}
           {{on "input" this.updateInputValue}}
+          {{on "keydown" this.handleKeyDown}}
+          @type="text"
+          id="custom-homepage-input"
+          placeholder={{i18n (themePrefix "input_placeholder")}}
           minlength="10"
         />
         <DButton
