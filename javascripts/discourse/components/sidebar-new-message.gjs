@@ -3,6 +3,7 @@ import { action } from "@ember/object";
 import { service } from "@ember/service";
 import DButton from "discourse/components/d-button";
 import Composer from "discourse/models/composer";
+import i18n from "discourse-common/helpers/i18n";
 import I18n from "discourse-i18n";
 
 export default class SidebarNewMessage extends Component {
@@ -25,7 +26,7 @@ export default class SidebarNewMessage extends Component {
   <template>
     <DButton
       @action={{this.openComposer}}
-      @translatedLabel="New discussion"
+      @translatedLabel={{i18n (themePrefix "new_question")}}
       @icon="plus"
       class="ai-new-question-button btn-default"
     />
