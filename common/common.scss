@@ -1,0 +1,261 @@
+:root {
+  --border-radius: 0.5em;
+}
+
+// hiding default sidebar things
+
+#sidebar-section-content-community,
+[data-section-name="categories"],
+[data-section-name="messages"],
+.sidebar-section-link .sidebar-section-link-prefix,
+.sidebar-footer-wrapper {
+  display: none;
+}
+
+.sidebar-wrapper .sidebar-container {
+  border: none;
+}
+
+// ai related sidebar content
+
+[data-section-name="custom-messages"] {
+  .sidebar-section-header-wrapper {
+    pointer-events: none;
+    font-size: var(--font-down-1);
+    .sidebar-section-header-caret {
+      display: none;
+    }
+    .sidebar-section-header-text {
+      letter-spacing: 0.5px;
+    }
+  }
+}
+
+[data-link-name="View All"] {
+  align-content: stretch;
+  .sidebar-section-link-prefix.icon {
+    display: flex;
+    font-size: var(--font-up-1);
+    margin-left: -0.15em;
+  }
+}
+
+.ai-new-question-button {
+  margin: 1.25em 1em 2.65em 1.25em;
+}
+
+.sidebar-section-link-wrapper {
+  .sidebar-section-link {
+    height: unset;
+    padding-block: 0.65em;
+    font-size: var(--font-down-1);
+    letter-spacing: 0.35px;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+
+    .sidebar-section-link-content-text {
+      white-space: normal;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+    }
+  }
+}
+
+.sidebar-section-link-prefix {
+  align-self: start;
+}
+
+// topic elements
+
+#topic-footer-button-share-and-invite,
+#topic-footer-button-archive,
+.topic-notifications-button,
+.bookmark-menu-trigger,
+.more-topics__container,
+.private-message-glyph-wrapper,
+.topic-header-participants,
+.topic-above-footer-buttons-outlet,
+.topic-map,
+.timeline-ago {
+  display: none;
+}
+
+.topic-timer-info {
+  border: none;
+}
+
+.topic-owner .actions .create-flag {
+  // why flag my own post
+  display: none;
+}
+
+.container.posts {
+  margin-bottom: 0;
+  .topic-navigation.with-timeline {
+    top: calc(var(--header-offset, 60px) + 5.5em);
+  }
+}
+
+#topic-footer-buttons {
+  margin-top: 0;
+  .topic-footer-main-buttons {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+}
+
+.topic-footer-main-buttons {
+  margin-left: calc(var(--topic-avatar-width) - 1.15em);
+}
+
+// header bot button
+
+.d-header-icons .ai-bot-button {
+  display: none;
+}
+
+// narrow desktop slide-out sidebar
+
+.hamburger-panel .revamped .sidebar-section-wrapper.sidebar-section ul {
+  grid-template-columns: 1fr;
+}
+
+// custom homepage
+
+html.composer-open .custom-homepage #main-outlet {
+  padding-bottom: 0;
+}
+
+.custom-homepage {
+  // hide toggle until we know there are messages
+  &:not(.sidebar-animate) {
+    &.has-sidebar-page .header-sidebar-toggle {
+      display: none;
+    }
+  }
+
+  // show toggle when populated
+  &:has(.sidebar-wrapper [data-section-name="custom-messages"]) {
+    .header-sidebar-toggle {
+      display: block;
+    }
+  }
+
+  // hide the sidebar on the homepage, if empty
+  #main-outlet-wrapper:not(:has([data-section-name="custom-messages"])) {
+    grid-template-areas: "content";
+    grid-template-columns: 1fr !important;
+    .sidebar-wrapper {
+      display: none;
+    }
+    .custom-homepage__content-wrapper {
+      margin-left: 1em;
+    }
+  }
+
+  // can't use this on the homepage due to composer hacks
+  .ai-new-question-button {
+    display: none;
+  }
+
+  // could maybe show if we force in:messages
+  .d-header-icons .header-dropdown-toggle.search-dropdown {
+    display: none;
+  }
+
+  // the homepage has a custom input that submits the composer automatically
+  // so this is a hack to hide the composer appearing
+  #reply-control {
+    display: none !important;
+  }
+
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--primary-low);
+    padding: 2em 2em 3em;
+    border-radius: var(--border-radius);
+    height: calc(100dvh - var(--header-offset) - 4em);
+  }
+
+  &__input-wrapper {
+    display: flex;
+    align-items: stretch;
+    gap: 0.5em;
+    width: 80%;
+    max-width: 46em;
+    margin-top: 2em;
+
+    input {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  &__button-wrapper {
+    margin-bottom: 1em;
+    display: flex;
+    gap: 1em;
+  }
+
+  h1 {
+    margin-bottom: 0.45em;
+    max-width: 20em;
+    text-align: center;
+    font-size: var(--font-up-6);
+    line-height: var(--line-height-medium);
+    @media screen and (min-height: 300px) {
+      margin-top: -1em;
+    }
+    @media screen and (min-height: 600px) {
+      margin-top: -3em;
+    }
+    @media screen and (min-height: 900px) {
+      margin-top: -6em;
+    }
+  }
+
+  .ai-question-button {
+    border-radius: var(--border-radius);
+    border: 1px solid var(--primary-low);
+    line-height: var(--line-height-medium);
+    .d-button-label {
+      color: var(--primary-high);
+    }
+  }
+
+  .ai-disclaimer {
+    width: 80%;
+    max-width: 46em;
+    text-align: center;
+    font-size: var(--font-down-1);
+    color: var(--primary-700);
+  }
+}
+
+// composer
+
+.reply-details .dropdown-select-box.composer-actions,
+.composer-fields {
+  display: none;
+}
+
+// hide user stuff
+
+.new-user-wrapper {
+  .user-navigation {
+    display: none;
+  }
+}
+
+.user-main .about.collapsed-info .details {
+  display: none;
+}
+
+.user-content {
+  margin-top: 0;
+}

@@ -1,5 +1,1 @@
-# Ask Discourse AI
-
-**Theme Summary**
-
-For more information, please see: **url to meta topic**
+Theme for ask.discourse.com

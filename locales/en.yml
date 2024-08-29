@@ -1,5 +1,15 @@
 en:
   theme_metadata:
-    description: ''
+    description: ""
     settings:
       example_setting: A description of a setting.
+  messages_sidebar:
+    title: "Recent conversations"
+  title: Ask AI anything about Discourse!
+  input_placeholder: "Ask a question about Discourse..."
+  input_submit: "Ask away!"
+  input_length: "Your question is too short, a more detailed question will get a better response..."
+  disclaimer:
+    "Generative AI can make mistakes, please flag them to help improve our
+    engine. All content on this site is reviewed regularly by Discourse
+    staff."

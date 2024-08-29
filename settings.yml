@@ -1,2 +1,18 @@
-example_setting:
-  default: true
+quick_links:
+  type: objects
+  default:
+    [
+      { "question": "How do I make a custom badge?" },
+      { "question": "How do I install themes?" },
+      { "question": "What are trust levels?" },
+    ]
+  schema:
+    name: "link"
+    identifier: question
+    properties:
+      question:
+        type: string
+        required: true
+
+recent_conversations:
+  default: 15
