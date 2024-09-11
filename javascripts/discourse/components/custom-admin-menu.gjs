@@ -52,7 +52,7 @@ export default class CustomAdminMenu extends Component {
               </LinkTo>
             </li>
             <li>
-              <LinkTo @route="group.messages.inbox" @model={{"moderators"}}>
+              <LinkTo @route="group.messages.inbox" @model="moderators">
                 <span>
                   {{icon "shield-alt"}}
                   {{i18n (themePrefix "admin_menu.mod_messages")}}
