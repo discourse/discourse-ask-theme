@@ -14,3 +14,12 @@ en:
     engine. All content on this site is reviewed regularly by Discourse
     staff."
   new_question: "New Question"
+  admin_menu:
+    all_messages: "All Bot Messages"
+    ai_config: "AI Configuration"
+    mod_messages: "Moderation Inbox"
+  user_menu:
+    feedback: "Support & Feedback"
+    all_questions: "All Questions"
+    appearance: "Fonts & Appearance"
+    account: "Account Settings"
