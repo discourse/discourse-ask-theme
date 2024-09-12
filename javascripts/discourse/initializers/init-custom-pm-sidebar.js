@@ -6,7 +6,7 @@ import I18n from "discourse-i18n";
 export default {
   name: "custom-sidebar-bot-messages",
   initialize() {
-    withPluginApi("1.3.0", (api) => {
+    withPluginApi("1.37.1", (api) => {
       const currentUser = api.container.lookup("service:current-user");
       const appEvents = api.container.lookup("service:app-events");
       const messageBus = api.container.lookup("service:message-bus");

@@ -25,7 +25,7 @@ export default class CustomAdminMenu extends Component {
 
   get modHasMessages() {
     this.pmTopicTrackingState.activeGroup = "moderators";
-    return this.pmTopicTrackingState?.newIncoming?.length;
+    return this.pmTopicTrackingState.newIncoming?.length;
   }
 
   <template>
