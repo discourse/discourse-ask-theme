@@ -23,3 +23,5 @@ en:
     all_questions: "All Questions"
     appearance: "Fonts & Appearance"
     account: "Account Settings"
+  meta:
+    profile_link: "on Meta"

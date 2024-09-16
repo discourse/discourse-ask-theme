@@ -497,3 +497,14 @@ html.composer-open .custom-homepage #main-outlet {
     display: none;
   }
 }
+
+// custom user card link
+
+.user-card-meta__profile-link {
+  display: block;
+  padding: 0.5em 0 0.25em;
+  .d-icon {
+    font-size: var(--font-down-1);
+    margin-right: 0.15em;
+  }
+}
