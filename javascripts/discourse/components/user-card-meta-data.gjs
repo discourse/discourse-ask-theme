@@ -11,6 +11,7 @@ export default class UserCardMetaData extends Component {
       <a
         href="https://meta.discourse.org/u/{{@outletArgs.user.username_lower}}"
         target="_blank"
+        rel="noopener noreferrer"
         class="user-card-meta__profile-link"
       >
         {{icon "up-right-from-square"}}
