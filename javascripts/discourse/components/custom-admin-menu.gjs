@@ -52,9 +52,17 @@ export default class CustomAdminMenu extends Component {
               </LinkTo>
             </li>
             <li>
+              <a href="/admin/plugins/explorer?id=4&params=null">
+                <span>
+                  {{icon "thumbs-up"}}
+                  {{i18n (themePrefix "admin_menu.liked_messages")}}
+                </span>
+              </a>
+            </li>
+            <li>
               <LinkTo @route="group.messages.inbox" @model="moderators">
                 <span>
-                  {{icon "shield-alt"}}
+                  {{icon "thumbs-down"}}
                   {{i18n (themePrefix "admin_menu.mod_messages")}}
                   {{#if this.modHasMessages}}
                     <span class="mod-message-badge"></span>
