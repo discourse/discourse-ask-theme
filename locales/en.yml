@@ -18,6 +18,7 @@ en:
     all_messages: "All Bot Messages"
     ai_config: "AI Configuration"
     mod_messages: "Moderation Inbox"
+    liked_messages: "Liked Messages"
   user_menu:
     feedback: "Support & Feedback"
     all_questions: "All Questions"
