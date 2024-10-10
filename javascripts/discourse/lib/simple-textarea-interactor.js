@@ -23,7 +23,7 @@ export default class SimpleTextareaInteractor {
   refreshHeight() {
     schedule("afterRender", () => {
       this.textarea.style.height = "auto";
-      this.textarea.style.height = `${this.textarea.scrollHeight + 1}px`;
+      this.textarea.style.height = `${this.textarea.scrollHeight + 2}px`;
     });
   }
 }
