@@ -45,6 +45,11 @@ export default class HiddenSubmit extends Service {
 
     try {
       await this.composer.save();
+      if (this.inputValue.length > 10) {
+        // prevents submitting same message again when returning home
+        // but avoids deleting too-short message on submit
+        this.inputValue = "";
+      }
     } catch (error) {
       // eslint-disable-next-line no-console
       console.error("Failed to submit message:", error);
