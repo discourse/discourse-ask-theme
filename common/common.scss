@@ -285,6 +285,7 @@ html.composer-open .custom-homepage #main-outlet {
       margin: 0;
       resize: none;
       border-radius: var(--d-button-border-radius);
+      max-height: 30vh;
       &:focus {
         outline: none;
         border-color: var(--primary-high);
