@@ -1,5 +1,4 @@
 import Component from "@glimmer/component";
-import { tracked } from "@glimmer/tracking";
 import { on } from "@ember/modifier";
 import { LinkTo } from "@ember/routing";
 import { service } from "@ember/service";
@@ -9,18 +8,10 @@ import DMenu from "float-kit/components/d-menu";
 
 export default class CustomAdminMenu extends Component {
   @service currentUser;
-  @service store;
   @service pmTopicTrackingState;
-
-  @tracked botUser = null;
 
   constructor() {
     super(...arguments);
-    this.loadBotUser();
-  }
-
-  async loadBotUser() {
-    this.botUser = await this.store.find("user", "gpt-4o");
   }
 
   get modHasMessages() {
@@ -71,12 +62,12 @@ export default class CustomAdminMenu extends Component {
               </LinkTo>
             </li>
             <li>
-              <LinkTo @route="userPrivateMessages" @model={{this.botUser}}>
+              <a href="/u/discoursehelper/messages">
                 <span>
                   {{icon "envelope"}}
                   {{i18n (themePrefix "admin_menu.all_messages")}}
                 </span>
-              </LinkTo>
+              </a>
             </li>
             <li>
               <a href="/admin/plugins/discourse-ai/ai-llms">
