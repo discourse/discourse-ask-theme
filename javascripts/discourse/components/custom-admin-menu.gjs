@@ -9,14 +9,10 @@ import DMenu from "float-kit/components/d-menu";
 
 export default class CustomAdminMenu extends Component {
   @service currentUser;
-  @service store;
   @service pmTopicTrackingState;
-
-  @tracked botUser = null;
 
   constructor() {
     super(...arguments);
-    this.loadBotUser();
   }
 
   get modHasMessages() {
