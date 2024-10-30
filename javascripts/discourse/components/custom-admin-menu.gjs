@@ -19,10 +19,6 @@ export default class CustomAdminMenu extends Component {
     this.loadBotUser();
   }
 
-  async loadBotUser() {
-    this.botUser = await this.store.find("user", "gpt-4o");
-  }
-
   get modHasMessages() {
     this.pmTopicTrackingState.activeGroup = "moderators";
     return this.pmTopicTrackingState.newIncoming?.length;
@@ -71,12 +67,12 @@ export default class CustomAdminMenu extends Component {
               </LinkTo>
             </li>
             <li>
-              <LinkTo @route="userPrivateMessages" @model={{this.botUser}}>
+              <a href="/u/discoursehelper/messages">
                 <span>
                   {{icon "envelope"}}
                   {{i18n (themePrefix "admin_menu.all_messages")}}
                 </span>
-              </LinkTo>
+              </a>
             </li>
             <li>
               <a href="/admin/plugins/discourse-ai/ai-llms">

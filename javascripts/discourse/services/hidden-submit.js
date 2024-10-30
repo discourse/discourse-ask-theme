@@ -36,7 +36,7 @@ export default class HiddenSubmit extends Service {
     await this.composer.open({
       action: Composer.PRIVATE_MESSAGE,
       draftKey: "private_message_ai",
-      recipients: "gpt-4o",
+      recipients: "DiscourseHelper",
       topicTitle: I18n.t("discourse_ai.ai_bot.default_pm_prefix"),
       topicBody: this.inputValue,
       archetypeId: "private_message",
