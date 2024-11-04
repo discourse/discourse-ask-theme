@@ -25,25 +25,28 @@ export default class UserCardMetaData extends Component {
   <template>
     {{#if this.currentUser.admin}}
       {{#if this.uniqueId}}
-        <a href={{this.uniqueId}}
+        <a
+          href={{this.uniqueId}}
           target="_blank"
           rel="noopener noreferrer"
           class="user-card-meta__profile-link"
         >
           {{icon "up-right-from-square"}}
-          {{this.username}} on {{this.siteName}}
+          {{this.username}}
+          on
+          {{this.siteName}}
         </a>
       {{else}}
-      <a
-        href="https://meta.discourse.org/u/{{@outletArgs.user.username_lower}}"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="user-card-meta__profile-link"
-      >
-        {{icon "up-right-from-square"}}
-        {{@outletArgs.user.username}}
-        {{i18n (themePrefix "meta.profile_link")}}
-      </a>
+        <a
+          href="https://meta.discourse.org/u/{{@outletArgs.user.username_lower}}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="user-card-meta__profile-link"
+        >
+          {{icon "up-right-from-square"}}
+          {{@outletArgs.user.username}}
+          {{i18n (themePrefix "meta.profile_link")}}
+        </a>
       {{/if}}
     {{/if}}
   </template>
