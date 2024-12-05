@@ -70,7 +70,7 @@ export default class CustomUserMenu extends Component {
                 @action={{routeAction "logout"}}
                 class="btn-flat profile-tab-btn"
               >
-                {{icon "sign-out-alt"}}
+                {{icon "right-from-bracket"}}
                 <span class="item-label">
                   {{i18n "user.log_out"}}
                 </span>

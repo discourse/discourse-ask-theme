@@ -22,7 +22,7 @@ export default class CustomAdminMenu extends Component {
   <template>
     <li class="custom-admin-menu">
       <DMenu
-        @icon="cog"
+        @icon="gear"
         @placement="bottom-end"
         @identifier="custom-admin-menu"
         @triggerClass="icon btn-flat {{if this.modHasMessages '-has-messages'}}"
