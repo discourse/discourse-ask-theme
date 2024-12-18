@@ -167,12 +167,21 @@ nav.post-controls .actions button {
   margin-left: calc(var(--topic-avatar-width) - 1.15em);
 }
 
-// hide header user button
+// custom header notification button
 
-.d-header {
-  #current-user {
+.user-menu.revamped .menu-tabs-container {
+  display: none;
+}
+
+#toggle-current-user {
+  order: 2;
+  img.avatar {
     display: none;
   }
+}
+
+.custom-user-menu {
+  order: 3;
 }
 
 // header bot button
