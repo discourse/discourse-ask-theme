@@ -39,7 +39,7 @@ export default class CustomUserMenu extends Component {
             </li>
             <li>
               <a
-                href="https://meta.discourse.org/t/help-us-test-ask-discourse-com/324441"
+                href="https://meta.discourse.org/t/feedback-for-ask-discourse-via-chat/336805"
               >
                 <span>
                   {{icon "fab-discourse"}}{{i18n
