@@ -2,7 +2,7 @@ import { action } from "@ember/object";
 import { next } from "@ember/runloop";
 import Service, { service } from "@ember/service";
 import Composer from "discourse/models/composer";
-import I18n from "discourse-i18n";
+import { i18n } from "discourse-i18n";
 
 export default class HiddenSubmit extends Service {
   @service composer;
@@ -26,7 +26,7 @@ export default class HiddenSubmit extends Service {
 
     if (this.inputValue.length < 10) {
       this.dialog.alert({
-        message: I18n.t(themePrefix("input_length")),
+        message: i18n(themePrefix("input_length")),
         didConfirm: () => this.focusInput(),
         didCancel: () => this.focusInput(),
       });
@@ -37,7 +37,7 @@ export default class HiddenSubmit extends Service {
       action: Composer.PRIVATE_MESSAGE,
       draftKey: "private_message_ai",
       recipients: "DiscourseHelper",
-      topicTitle: I18n.t("discourse_ai.ai_bot.default_pm_prefix"),
+      topicTitle: i18n("discourse_ai.ai_bot.default_pm_prefix"),
       topicBody: this.inputValue,
       archetypeId: "private_message",
       disableDrafts: true,
