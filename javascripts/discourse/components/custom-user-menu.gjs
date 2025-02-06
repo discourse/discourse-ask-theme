@@ -4,9 +4,9 @@ import { LinkTo } from "@ember/routing";
 import { service } from "@ember/service";
 import DButton from "discourse/components/d-button";
 import avatar from "discourse/helpers/bound-avatar-template";
+import icon from "discourse/helpers/d-icon";
 import routeAction from "discourse/helpers/route-action";
-import icon from "discourse-common/helpers/d-icon";
-import i18n from "discourse-common/helpers/i18n";
+import { i18n } from "discourse-i18n";
 import DMenu from "float-kit/components/d-menu";
 
 export default class CustomUserMenu extends Component {

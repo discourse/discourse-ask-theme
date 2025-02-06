@@ -1,7 +1,7 @@
 import { tracked } from "@glimmer/tracking";
 import { ajax } from "discourse/lib/ajax";
 import { withPluginApi } from "discourse/lib/plugin-api";
-import I18n from "discourse-i18n";
+import { i18n } from "discourse-i18n";
 
 export default {
   name: "custom-sidebar-bot-messages",
@@ -118,7 +118,7 @@ export default {
             }
 
             get text() {
-              return I18n.t(themePrefix("messages_sidebar.title"));
+              return i18n(themePrefix("messages_sidebar.title"));
             }
 
             get displaySection() {

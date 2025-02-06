@@ -5,7 +5,7 @@ import didInsert from "@ember/render-modifiers/modifiers/did-insert";
 import { service } from "@ember/service";
 import DButton from "discourse/components/d-button";
 import bodyClass from "discourse/helpers/body-class";
-import i18n from "discourse-common/helpers/i18n";
+import { i18n } from "discourse-i18n";
 import HomepageButtons from "../components/homepage-buttons";
 import SimpleTextareaInteractor from "../lib/simple-textarea-interactor";
 
