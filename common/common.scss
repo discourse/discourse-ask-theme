@@ -127,12 +127,12 @@ body:not(.staff) #topic-footer-button-archive,
   width: calc(100% - 6.5em);
   margin-top: 0;
 
-  @media screen and (max-width: 924px) {
+  @media screen and (width <= 924px) {
     max-width: unset;
     width: 100%;
   }
 
-  @media screen and (min-width: 1300px) {
+  @media screen and (width >= 1300px) {
     width: 100%;
     max-width: 51em;
   }
@@ -140,11 +140,11 @@ body:not(.staff) #topic-footer-button-archive,
   .topic-footer-main-buttons {
     justify-content: flex-end;
 
-    @media screen and (min-width: 1180px) {
+    @media screen and (width >= 1180px) {
       margin-right: 0.6em;
     }
 
-    @media screen and (max-width: 924px) {
+    @media screen and (width <= 924px) {
       margin-right: 0.6em;
     }
   }
@@ -154,7 +154,7 @@ body:not(.staff) #topic-footer-button-archive,
   display: none;
 }
 
-@media screen and (max-width: 924px) {
+@media screen and (width <= 924px) {
   .archetype-private_message .topic-post:last-child {
     margin-bottom: 0;
   }
@@ -207,7 +207,7 @@ html.composer-open .custom-homepage #main-outlet {
 }
 
 .custom-homepage {
-  @media screen and (max-width: 676px) {
+  @media screen and (width <= 676px) {
     #main-outlet {
       padding-top: 0;
     }
@@ -241,7 +241,7 @@ html.composer-open .custom-homepage #main-outlet {
       display: none;
     }
 
-    @media screen and (min-width: 900px) {
+    @media screen and (width >= 900px) {
       .custom-homepage__content-wrapper {
         margin-left: 1em;
       }
@@ -272,7 +272,7 @@ html.composer-open .custom-homepage #main-outlet {
     justify-content: center;
     height: calc(100dvh - var(--header-offset) - 1.25em);
 
-    @media screen and (min-width: 675px) {
+    @media screen and (width >= 675px) {
       border: 1px solid var(--primary-low);
       padding: 2em 2em 3em;
       border-radius: var(--border-radius);
@@ -288,7 +288,7 @@ html.composer-open .custom-homepage #main-outlet {
     max-width: 90dvw;
     margin-top: 2em;
 
-    @media screen and (min-width: 600px) {
+    @media screen and (width >= 600px) {
       width: 80%;
       max-width: 46em;
     }
@@ -317,7 +317,7 @@ html.composer-open .custom-homepage #main-outlet {
     display: flex;
     gap: 1em;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (width <= 600px) {
       padding-right: 2em;
       box-sizing: border-box;
       max-width: 95dvw;
@@ -333,8 +333,8 @@ html.composer-open .custom-homepage #main-outlet {
         width: 4em;
         background: linear-gradient(
           to right,
-          rgba(var(--secondary-rgb), 0),
-          rgba(var(--secondary-rgb), 1)
+          rgb(var(--secondary-rgb), 0),
+          rgb(var(--secondary-rgb), 1)
         );
         right: 0;
         height: 2.5em;
@@ -358,15 +358,15 @@ html.composer-open .custom-homepage #main-outlet {
     font-size: var(--font-up-6);
     line-height: var(--line-height-medium);
 
-    @media screen and (min-height: 300px) {
+    @media screen and (height >= 300px) {
       margin-top: -1em;
     }
 
-    @media screen and (min-height: 600px) {
+    @media screen and (height >= 600px) {
       margin-top: -3em;
     }
 
-    @media screen and (min-height: 900px) {
+    @media screen and (height >= 900px) {
       margin-top: -6em;
     }
   }
@@ -392,7 +392,7 @@ html.composer-open .custom-homepage #main-outlet {
     font-size: var(--font-down-1);
     color: var(--primary-700);
 
-    @media screen and (min-width: 600px) {
+    @media screen and (width >= 600px) {
       width: 80%;
       max-width: 46em;
     }
@@ -512,7 +512,7 @@ html.composer-open .custom-homepage #main-outlet {
 
 // small screens
 
-@media screen and (max-width: 600px) {
+@media screen and (width <= 600px) {
   .share-ai-conversation-button {
     .d-icon {
       margin: 0;
