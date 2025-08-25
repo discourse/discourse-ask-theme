@@ -13,6 +13,8 @@ export default {
       // we can get stuck in a circular reference
       // if the bot header button is enabled
       // due to its fallback for lastKnownAppURL
+      // the button should be disabled
+      // but this check will prevent a crash
       if (!aiBotinHeader && user) {
         setDefaultHomepage("discourse-ai/ai-bot/conversations");
       }
