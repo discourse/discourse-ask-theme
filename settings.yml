@@ -13,6 +13,3 @@ quick_links:
       question:
         type: string
         required: true
-
-recent_conversations:
-  default: 15
