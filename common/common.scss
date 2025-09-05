@@ -1,3 +1,5 @@
+@use "lib/viewport";
+
 :root {
   --border-radius: 0.5em;
 }
@@ -33,7 +35,7 @@ body:not(.staff) #topic-footer-button-archive,
 .topic-above-footer-buttons-outlet,
 .topic-map,
 .timeline-ago,
-#topic-footer-buttons .topic-footer-main-buttons details {
+#topic-footer-buttons {
   display: none;
 }
 
@@ -76,33 +78,6 @@ body:not(.staff) #topic-footer-button-archive,
   justify-content: center;
 }
 
-#topic-footer-buttons {
-  width: calc(100% - 6.5em);
-  margin-top: 0;
-
-  @media screen and (width <= 924px) {
-    max-width: unset;
-    width: 100%;
-  }
-
-  @media screen and (width >= 1300px) {
-    width: 100%;
-    max-width: 51em;
-  }
-
-  .topic-footer-main-buttons {
-    justify-content: flex-end;
-
-    @media screen and (width >= 1180px) {
-      margin-right: 0.6em;
-    }
-
-    @media screen and (width <= 924px) {
-      margin-right: 0.6em;
-    }
-  }
-}
-
 #topic-progress-wrapper.docked {
   display: none;
 }
@@ -121,10 +96,6 @@ nav.post-controls .actions button {
       margin-right: 0.45em;
     }
   }
-}
-
-.topic-footer-main-buttons {
-  margin-left: calc(var(--topic-avatar-width) - 1.15em);
 }
 
 // custom header notification button
@@ -299,6 +270,14 @@ html.composer-open .custom-homepage #main-outlet {
 
 .custom-homepage__button-wrapper {
   margin-bottom: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5em;
+
+  @include viewport.until(md) {
+    font-size: var(--font-down-1);
+  }
 }
 
 .ai-question-button {
