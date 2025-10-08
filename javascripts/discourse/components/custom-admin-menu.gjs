@@ -7,12 +7,7 @@ import { i18n } from "discourse-i18n";
 import DMenu from "float-kit/components/d-menu";
 
 export default class CustomAdminMenu extends Component {
-  @service currentUser;
   @service pmTopicTrackingState;
-
-  constructor() {
-    super(...arguments);
-  }
 
   get modHasMessages() {
     this.pmTopicTrackingState.activeGroup = "moderators";
