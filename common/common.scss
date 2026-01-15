@@ -28,15 +28,20 @@ body:not(.staff) {
 #topic-footer-button-share-and-invite,
 body:not(.staff) #topic-footer-button-archive,
 #topic-footer-buttons .topic-notifications-button,
+#topic-footer-buttons .topic-admin-menu-trigger,
+#topic-footer-buttons .create,
 .bookmark-menu-trigger,
 .more-topics__container,
 .private-message-glyph-wrapper,
 .topic-header-participants,
 .topic-above-footer-buttons-outlet,
 .topic-map,
-.timeline-ago,
-#topic-footer-buttons {
+.timeline-ago {
   display: none;
+}
+
+body.has-ai-conversations-sidebar #topic-footer-buttons {
+  max-width: 51em;
 }
 
 .topic-timer-info {
