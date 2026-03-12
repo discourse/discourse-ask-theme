@@ -3,11 +3,11 @@ import { on } from "@ember/modifier";
 import { LinkTo } from "@ember/routing";
 import { service } from "@ember/service";
 import DButton from "discourse/components/d-button";
+import DMenu from "discourse/float-kit/components/d-menu";
 import avatar from "discourse/helpers/bound-avatar-template";
 import icon from "discourse/helpers/d-icon";
 import routeAction from "discourse/helpers/route-action";
 import { i18n } from "discourse-i18n";
-import DMenu from "float-kit/components/d-menu";
 
 export default class CustomUserMenu extends Component {
   @service currentUser;

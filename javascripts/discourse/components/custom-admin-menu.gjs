@@ -2,15 +2,19 @@ import Component from "@glimmer/component";
 import { on } from "@ember/modifier";
 import { LinkTo } from "@ember/routing";
 import { service } from "@ember/service";
+import DMenu from "discourse/float-kit/components/d-menu";
 import icon from "discourse/helpers/d-icon";
 import { i18n } from "discourse-i18n";
-import DMenu from "float-kit/components/d-menu";
 
 export default class CustomAdminMenu extends Component {
   @service pmTopicTrackingState;
 
-  get modHasMessages() {
+  constructor() {
+    super(...arguments);
     this.pmTopicTrackingState.activeGroup = "moderators";
+  }
+
+  get modHasMessages() {
     return this.pmTopicTrackingState.newIncoming?.length;
   }
 
