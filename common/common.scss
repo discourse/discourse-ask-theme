@@ -158,20 +158,7 @@ html.composer-open .custom-homepage #main-outlet {
 
 // custom header menus
 .custom-admin-menu-trigger {
-  position: relative;
   background: transparent;
-
-  &.-has-messages {
-    &::after {
-      position: absolute;
-      content: "";
-      background: var(--danger);
-      border-radius: 100%;
-      padding: 0.25em;
-      top: 0.5em;
-      right: 0.25em;
-    }
-  }
 }
 
 .custom-menu {
