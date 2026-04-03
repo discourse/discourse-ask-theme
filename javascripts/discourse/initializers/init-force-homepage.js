@@ -10,9 +10,7 @@ export default {
           (Superclass) =>
             class extends Superclass {
               beforeModel() {
-                this.router.transitionTo(
-                  "/discourse-ai/ai-bot/conversations"
-                );
+                this.router.transitionTo("/discourse-ai/ai-bot/conversations");
               }
             }
         );
