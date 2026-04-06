@@ -303,3 +303,14 @@ html.composer-open .custom-homepage #main-outlet {
 .sidebar-row {
   --d-sidebar-row-horizontal-padding: 0.33em;
 }
+
+// Hide "back to forum" because we're only focusing on AI conversations
+.sidebar-wrapper .sidebar-sections__back-to-forum {
+  display: none;
+}
+
+body.has-ai-conversations-sidebar
+  .sidebar-sections__back-to-forum
+  + .ai-new-question-button__wrapper {
+  margin-top: var(--space-6);
+}
