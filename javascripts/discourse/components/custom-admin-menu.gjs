@@ -47,7 +47,7 @@ const CustomAdminMenu = <template>
             </LinkTo>
           </li>
           <li>
-            <a href="/u/discoursehelper/messages">
+            <a href="/u/discoursehelper/messages/sent">
               <span>
                 {{icon "envelope"}}
                 {{i18n (themePrefix "admin_menu.all_messages")}}
