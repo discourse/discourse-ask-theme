@@ -215,13 +215,9 @@ html.composer-open .custom-homepage #main-outlet {
     display: none;
   }
 
-  .control-group.home {
-    display: none;
-  }
-
-  // "Other settings" is hidden, apart from the send shortcut preference which
-  // controls how messages are submitted in the chat-style AI composer
-  .control-group.other > *:not(.pref-send-shortcut) {
+  .pref-auto-unpin,
+  .control-group.home,
+  .pref-new-user-tips {
     display: none;
   }
 }
