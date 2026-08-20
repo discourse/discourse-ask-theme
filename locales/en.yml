@@ -22,7 +22,7 @@ en:
   user_menu:
     feedback: "Support & Feedback"
     all_questions: "All Questions"
-    appearance: "Fonts & Appearance"
+    appearance: "Appearance & Preferences"
     account: "Account Settings"
   meta:
     profile_link: "on Meta"
