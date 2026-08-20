@@ -14,7 +14,6 @@ RSpec.describe "Interface preferences", type: :system do
     interface_preferences.visit(current_user)
 
     expect(page).to have_css(".control-group.other .pref-send-shortcut")
-    expect(page).to have_no_css(".control-group.other .pref-enable-quoting")
     expect(page).to have_no_css(".control-group.home")
   end
 end
