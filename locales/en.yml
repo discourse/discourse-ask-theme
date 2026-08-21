@@ -16,6 +16,7 @@ en:
   new_question: "New Question"
   admin_menu:
     all_messages: "All Bot Messages"
+    helper_messages: "Admin Helper Messages"
     ai_config: "AI Configuration"
     mod_messages: "Moderation Inbox"
     liked_messages: "Liked Messages"
