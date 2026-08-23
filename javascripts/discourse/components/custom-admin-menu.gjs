@@ -55,6 +55,16 @@ const CustomAdminMenu = <template>
             </a>
           </li>
           <li>
+            <a
+              href="/search?expanded=true&q=Admin%20Assistant%20chat%20with%20in:title%20personal_messages:discoursehelper%20order:latest"
+            >
+              <span>
+                {{icon "robot"}}
+                {{i18n (themePrefix "admin_menu.helper_messages")}}
+              </span>
+            </a>
+          </li>
+          <li>
             <a href="/admin/plugins/discourse-ai/ai-llms">
               <span>
                 {{icon "discourse-sparkles"}}{{i18n
