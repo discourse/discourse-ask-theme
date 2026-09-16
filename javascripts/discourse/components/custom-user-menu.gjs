@@ -31,13 +31,6 @@ export default class CustomUserMenu extends Component {
             {{on "click" args.close}}
           >
             <li>
-              <LinkTo @route="userPrivateMessages" @model={{this.currentUser}}>
-                <span>{{icon "envelope"}}{{i18n
-                    (themePrefix "user_menu.all_questions")
-                  }}</span>
-              </LinkTo>
-            </li>
-            <li>
               <a
                 href="https://meta.discourse.org/t/feedback-for-ask-discourse-via-chat/336805"
               >

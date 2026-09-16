@@ -22,7 +22,6 @@ en:
     liked_messages: "Liked Messages"
   user_menu:
     feedback: "Support & Feedback"
-    all_questions: "All Questions"
     appearance: "Appearance & Preferences"
     account: "Account Settings"
   meta:
