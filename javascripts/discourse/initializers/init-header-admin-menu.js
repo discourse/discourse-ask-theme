@@ -4,7 +4,7 @@ import CustomAdminMenu from "../components/custom-admin-menu";
 export default apiInitializer((api) => {
   const currentUser = api.getCurrentUser();
 
-  if (currentUser.admin) {
+  if (currentUser?.admin) {
     api.headerIcons.add("custom-admin-menu", CustomAdminMenu, {
       after: "search",
     });

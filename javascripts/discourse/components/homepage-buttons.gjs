@@ -5,10 +5,17 @@ import { service } from "@ember/service";
 import DButton from "discourse/components/d-button";
 
 export default class HomepageButtons extends Component {
+  @service currentUser;
   @service hiddenSubmit;
 
   @action
   updateAndSubmit(value) {
+    if (!this.currentUser) {
+      this.args.outletArgs.updateInput(value);
+      this.args.outletArgs.submit();
+      return;
+    }
+
     this.hiddenSubmit.inputValue = value;
     this.hiddenSubmit.submitToBot();
   }

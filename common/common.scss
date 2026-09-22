@@ -312,6 +312,6 @@ html.composer-open .custom-homepage #main-outlet {
 
 body.has-ai-conversations-sidebar
   .sidebar-sections__back-to-forum
-  + .ai-new-question-button__wrapper {
+  + :is(.ai-new-question-button__wrapper, .ai-bot-anonymous-card) {
   margin-top: var(--space-6);
 }
