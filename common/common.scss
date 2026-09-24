@@ -69,18 +69,12 @@ body.has-ai-conversations-sidebar #topic-footer-buttons {
 
 #topic-title {
   display: flex;
-  justify-content: center;
   width: 100%;
 
   .title-wrapper {
     width: 100%;
     max-width: 960px;
   }
-}
-
-.small-action,
-.onscreen-post .row {
-  justify-content: center;
 }
 
 #topic-progress-wrapper.docked {
@@ -314,4 +308,11 @@ body.has-ai-conversations-sidebar
   .sidebar-sections__back-to-forum
   + :is(.ai-new-question-button__wrapper, .ai-bot-anonymous-card) {
   margin-top: var(--space-6);
+}
+
+@include viewport.from(xl) {
+  // improve content centering on large screens
+  body.has-sidebar-page #main-outlet-wrapper {
+    gap: 0 5em;
+  }
 }
