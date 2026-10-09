@@ -15,7 +15,6 @@ RSpec.describe "Anonymous preview of AI conversations", type: :system do
     SiteSetting.discourse_ai_enabled = true
     SiteSetting.ai_bot_enabled_llms = llm_model.id.to_s
     SiteSetting.ai_bot_enabled = true
-    DiscourseAi::AiBot::SiteSettingsExtension.enable_or_disable_ai_bots
     SiteSetting.ai_bot_allowed_groups = "#{group.id}|#{Group::AUTO_GROUPS[:anonymous_users]}"
     SiteSetting.default_homepage = "ai-conversations"
     SiteSetting.enable_local_logins_via_code = false
